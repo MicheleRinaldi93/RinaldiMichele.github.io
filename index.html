@@ -499,6 +499,23 @@
 
 
     <script src="app.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById("themeToggle");
+        themeToggle.addEventListener("click", () => {
+            const html = document.documentElement;
+            if (html.getAttribute("data-color-scheme") === "light") {
+                html.setAttribute("data-color-scheme", "dark");
+            } else {
+                html.setAttribute("data-color-scheme", "light");
+            }
+        });
+
+        // Optional: Scroll to section function
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>
